@@ -1,0 +1,46 @@
+{
+  "name": "testraku",
+  "displayName": "TestRaku",
+  "description": "",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.82.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "languages": [
+      {
+        "id": "raku",
+        "aliases": [
+		  "Raku",
+          "Perl6",
+          "perl6"
+        ],
+        "extensions": [
+          ".raku",
+		  ".rakumod",
+		  ".rakutest",
+		  ".rakudoc",
+		  ".nqp",
+		  ".p6",
+          ".pl6",
+          ".pm6"
+        ],
+        "firstLine": "(^#!.*\\bperl6\\b)|use\\s+v6|raku|=begin\\spod|my\\sclass",
+        "configuration": "./raku.language-configuration.json"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "raku",
+        "scopeName": "source.raku",
+        "path": "./syntaxes/raku.tmLanguage.json",
+        "unbalancedBracketScopes": [
+          "variable.other.predefined.perl"
+        ]
+      }
+    ]
+  }
+}
